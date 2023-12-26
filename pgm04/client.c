@@ -4,6 +4,13 @@
 #include <ws2tcpip.h>
 #include <string.h>
 
+// #include <stdio.h>
+// #include <sys/socket.h>
+// #include <netinet/in.h>
+// #include <string.h>
+// #include <stdlib.h>
+
+
 int main(){
   int clientSocket, portNum, nBytes;
   char buffer[1024];
