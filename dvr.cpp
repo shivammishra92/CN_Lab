@@ -20,12 +20,30 @@ void bellmanFord(int src,int nodes,int graph[MAX_NODES][MAX_NODES]){
             }
         }
      }
-     cout<<"Vertex     distance from src:"<<endl;
-     for(int i=0;i<nodes;i++){
-        if(distance[i] == INT_MAX)
-        cout<<i<<" -> "<<"not reachable"<<endl;
-        else
-        cout<<i<<" -> "<<distance[i]<<endl;
+
+     //check for negative cycle
+     bool negativeCycle = false;
+     for(int k=0;k<nodes-1;k++){
+        for(int i=0;i<nodes;i++){
+            for(int j=0;j<nodes;j++){
+                if(graph[i][j] != 0 && distance[i] != INT_MAX && distance[i] + graph[i][j] < distance[j]){
+                    negativeCycle = true;
+                    break;
+                }
+            }
+        }
+     }
+     if(negativeCycle){
+        cout<<"Graph contains negative cycle"<<endl;
+     }
+     else{
+        cout<<"Vertex     distance from src:"<<endl;
+        for(int i=0;i<nodes;i++){
+            if(distance[i] == INT_MAX)
+            cout<<i<<" -> "<<"not reachable"<<endl;
+            else
+            cout<<i<<" -> "<<distance[i]<<endl;
+        }
      }
 }
 
