@@ -34,7 +34,7 @@ int main()
             {
                 if (count>n-w)
                 {
-                        cout<<"\n Acknowledge received for data packet " << a[s]; 
+                        cout<<"\n Acknowledgement received for data packet " << a[s]; 
                         s++;
 
                     if(a[s-1]==n)
@@ -49,11 +49,11 @@ int main()
                         printing(s,e,a);
                         count++;
                     }
-                    //cout<<"Count in spcl if loop "<<count;
+                    
                 }
                 else
                 {
-                    cout<<"\n Acknowledge received for data packet " << a[s]; 
+                    cout<<"\n Acknowledgement received for data packet " << a[s]; 
                     s++;
                     e++;
 
@@ -62,7 +62,7 @@ int main()
                     cout<<"\n The current sliding window is "; 
                     printing(s,e,a);
                     count++;
-                //cout<<"Count in if loop "<<count;
+                
                 }
 
 
