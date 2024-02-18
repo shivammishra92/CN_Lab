@@ -14,17 +14,20 @@ void printing(int x , int y, int a[])
 int main()
 {
         int choice , count = 1,n,w; 
-        cout<<"\nEnter total data length "; 
+        cout<<"\nEnter total frames: "; 
         cin>>n;
-        cout<<"\nEnter window size "; 
+        cout<<"\nEnter window size: "; 
         cin>>w;
+
         int a[100];
-        cout<<"\nEnter the data packet "; 
-        for(int i=0;i<w;i++)
-        cin>>a[i];
+        cout<<"\nEnter the data packets: "; 
+        for(int i=0;i<w;i++){
+            cin>>a[i];
+        }
+        
 
         int s=0,e=w-1;
-        cout<<"\n The current sliding window is "; 
+        cout<<"\n The current sliding window is: "; 
         printing(s,e,a);
 
         while(count<=n)
@@ -34,7 +37,7 @@ int main()
             {
                 if (count>n-w)
                 {
-                        cout<<"\n Acknowledgement received for data packet " << a[s]; 
+                        cout<<"\n Acknowledgement received for data packet: " << a[s]; 
                         s++;
 
                     if(a[s-1]==n)
@@ -45,7 +48,7 @@ int main()
                     }
                     else
                     {
-                        cout<<"\n The current sliding window is ";
+                        cout<<"\n The current sliding window is: ";
                         printing(s,e,a);
                         count++;
                     }
@@ -53,13 +56,13 @@ int main()
                 }
                 else
                 {
-                    cout<<"\n Acknowledgement received for data packet " << a[s]; 
+                    cout<<"\n Acknowledgement received for data packet: " << a[s]; 
                     s++;
                     e++;
 
-                    cout<<"\n Enter the data packet ";
+                    cout<<"\n Enter the data packet: ";
                     cin>>a[e];
-                    cout<<"\n The current sliding window is "; 
+                    cout<<"\n The current sliding window is: "; 
                     printing(s,e,a);
                     count++;
                 
@@ -70,13 +73,13 @@ int main()
             else if(choice == 1)
             {
                 cout<<"\n Timed out";
-                cout<<"\n The current sliding window is ";
+                cout<<"\n The current sliding window is: ";
                 printing(s,e,a);
             }
             else
             {
                 cout<<"\n Error in transmission"; 
-                cout<<"\n The current sliding window is "; 
+                cout<<"\n The current sliding window is: "; 
                 printing(s,e,a);
 
             }
