@@ -35,11 +35,13 @@ int main()
             choice = rand() % 3; 
             if(choice==0)
             {
+                //no more pkts can be added
                 if (count>n-w)
                 {
                         cout<<"\n Acknowledgement received for data packet: " << a[s]; 
                         s++;
 
+                    //all data pkts sent
                     if(a[s-1]==n)
                     {
                         cout<<"\n Data transmission successful using selective-repeat sliding window protocol"; 
@@ -54,6 +56,7 @@ int main()
                     }
                     
                 }
+                //more pkts can be added since total frame limit is not reached
                 else
                 {
                     cout<<"\n Acknowledgement received for data packet: " << a[s]; 
