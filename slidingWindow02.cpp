@@ -40,7 +40,7 @@ int main()
                     if(a[s-1]==n)
                     {
                         cout<<"\n Data transmission successful using selective-repeat sliding window protocol"; 
-                        cout<<"\n USN: 4NI18IS019";
+                        cout<<"\n USN: 4NI18IS095";
                         break;
                     }
                     else
