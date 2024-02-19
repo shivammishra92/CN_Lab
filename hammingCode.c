@@ -31,7 +31,7 @@ int main()
         printf("\nCongratulations there is no error!!\n");
     }
     else{
-        printf("\nError at the position : %d\nThe correct message is : \n", c);
+        printf("\nError at the position : %d\n", c);
         if(rec[7 - c] == 0)
         {
             rec[7 - c] = 1;
@@ -39,6 +39,8 @@ int main()
         else{
             rec[7 - c] = 0;
         }
+
+        printf("The correct message is : ");
         for(int i=0;i<7;i++)
         {
             printf("%d ", rec[i]);
