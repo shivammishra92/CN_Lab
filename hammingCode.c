@@ -40,7 +40,7 @@ int main()
             rec[7 - c] = 0;
         }
 
-        printf("The correct message is : ");
+        printf("The correct message is :\n ");
         for(int i=0;i<7;i++)
         {
             printf("%d ", rec[i]);
