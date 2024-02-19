@@ -3,9 +3,9 @@
 #include<iostream>
 using namespace std;
 
-void printing(int x , int y, int a[])
+void printing(int s , int e, int a[])
 {
-    for(int i=x;i<=y;i++)
+    for(int i=s;i<=e;i++)
     {
     cout<<a[i]<<" ";
     }
